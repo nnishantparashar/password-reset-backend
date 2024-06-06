@@ -65,7 +65,7 @@ exports.login = async (req, res) => {
         // res.cookie("accessToken", token, {
         //   expires: new Date(Date.now() + 86400000),
         // });
-        res.cookie('accessToken',token, { maxAge: 86400, httpOnly: true });
+        res.cookies('accessToken',token, { maxAge: 86400, httpOnly: true });
 
         return res.status(200).send({
           message: "User logged-in successfully.",
